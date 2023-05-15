@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial=-scale" />
+        <style>
+            .container .row {
+                display: flex;
+                flex-flow: row wrap;
+                grid-gap: 2rem;
+            }
+            .container .row .col-50 {
+                flex: 1 450px;
+            }
+            .container .row .col-50 .row {
+                display: flex;
+                flex-flow: row wrap;
+                grid-gap: 1rem;
+            }
+            .container .row .col-50 .row .card {
+                flex: 1 250px;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-50">
+                    
+                    <h2>category</h2>
+                    <div class="row">
+                        <div class="card">
+                            <img src="" alt="Cake 1" />
+                            <h4>Code 001</h4>
+                            <p>Price: 2.0$</p>
+                            <button type="button" onclick="click1()">favorite</button>
+                        </div>
+                        <div class="card">
+                            <img src="..." alt="Cake 2" />
+                            <h4>Code 002</h4>
+                            <p>Price: 1.0$</p>
+                            <button type="button" onclick="click2()">favorite</button>
+                        </div>
+                        <div class="card">
+                            <img src="..." alt="Cake 3" />
+                            <h4>Code 003</h4>
+                            <p>Price: 3$</p>
+                            <button type="button" onclick="click3()">favorite</button>
+                        </div>
+                        <div class="card">
+                            <img src="..." alt="Cake 4" />
+                            <h4>Code 004</h4>
+                            <p>Price: 4.0$</p>
+                            <button type="button" onclick="click4()">favorite</button>
+                        </div>
+                        <div class="card">
+                            <img src="..." alt="Cake 5" />
+                            <h4>Code 005</h4>
+                            <p>Price: 8,0$</p>
+                            <button type="button" onclick="click5()">favorite</button>
+                        </div>
+                        <div class="card">
+                            <img src="" alt="Cake 6" />
+                            <h4>Code 006</h4>
+                            <p>Price: 5.0$</p>
+                            <button type="button" onclick="click6()">favorite</button>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="col-50">
+                    
+                    <h2>Your favorite</h2>
+                    <table border="1" id="table">
+                        <tr>
+                            <th>Code</th>
+                            <th>Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </table>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <script>
+            
+            let result = `
+                <tr>
+                    <th>Code</th>
+                    <th>Price</th>
+                    <th>Total Price</th>
+                </tr>
+            `;
+            
+            function click1() {
+                result += `
+                    <tr>
+                        <td>001</td>
+                        <td>2.0</td>
+                        <td>2</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            
+            function click2() {
+                result += `
+                    <tr>
+                        <td>002</td>
+                        <td>1.0</td>
+                        <td>1</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            
+            function click3() {
+                result += `
+                    <tr>
+                        <td>003</td>
+                        <td>3.0</td>
+                        <td>3</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            function click4() {
+                result += `
+                    <tr>
+                        <td>004</td>
+                        <td>4.0</td>
+                        <td>4</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            function click5() {
+                result += `
+                    <tr>
+                        <td>005</td>
+                        <td>8.0</td>
+                        <td>8</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            function click6() {
+                result += `
+                    <tr>
+                        <td>006</td>
+                        <td>5.0</td>
+                        <td>5</td>
+                    </tr>
+                `;
+                document.getElementById('table').innerHTML = result;
+            }
+            
+        </script>
+        
+    </body>
+</html>
